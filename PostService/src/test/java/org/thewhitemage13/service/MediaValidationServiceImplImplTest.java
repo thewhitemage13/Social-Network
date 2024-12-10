@@ -8,7 +8,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.ResponseEntity;
 import org.thewhitemage13.clients.MediaClient;
 import org.thewhitemage13.dto.CreatePostDTO;
-import org.thewhitemage13.exception.MediaNotFoundException;
+import org.thewhitemage13.exceptions.MediaNotFoundException;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;

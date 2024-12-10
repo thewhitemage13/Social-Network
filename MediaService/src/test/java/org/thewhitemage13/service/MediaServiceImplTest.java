@@ -8,7 +8,7 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.thewhitemage13.entity.Media;
-import org.thewhitemage13.exception.MediaNotFoundException;
+import org.thewhitemage13.exceptions.MediaNotFoundException;
 import org.thewhitemage13.processor.MediaProcessorImpl;
 import org.thewhitemage13.repository.MediaRepository;
 

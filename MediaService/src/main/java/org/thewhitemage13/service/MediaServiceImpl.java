@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 import org.thewhitemage13.MediaEvent;
 import org.thewhitemage13.entity.Media;
-import org.thewhitemage13.exception.MediaNotFoundException;
+import org.thewhitemage13.exceptions.MediaNotFoundException;
 import org.thewhitemage13.interfaces.MediaServiceInterface;
 import org.thewhitemage13.processor.MediaProcessorImpl;
 import org.thewhitemage13.repository.MediaRepository;

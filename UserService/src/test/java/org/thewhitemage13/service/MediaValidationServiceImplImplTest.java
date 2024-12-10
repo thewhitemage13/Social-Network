@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.thewhitemage13.clients.MediaClient;
 import org.thewhitemage13.clients.PostClient;
 import org.thewhitemage13.dto.CreateUserDTO;
-import org.thewhitemage13.exception.MediaNotFoundException;
+import org.thewhitemage13.exceptions.MediaNotFoundException;
 
 import java.util.Collections;
 import java.util.List;

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.thewhitemage13.dto.CreatePostDTO;
 import org.thewhitemage13.dto.OpenPostDTO;
 import org.thewhitemage13.dto.UpdatePostDTO;
-import org.thewhitemage13.exception.PostNotFoundException;
+import org.thewhitemage13.exceptions.PostNotFoundException;
 import org.thewhitemage13.service.PostServiceImpl;
 
 import java.util.List;

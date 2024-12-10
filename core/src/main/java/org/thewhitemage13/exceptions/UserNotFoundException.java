@@ -1,4 +1,4 @@
-package org.thewhitemage13.exception;
+package org.thewhitemage13.exceptions;
 
 /**
  * Exception thrown when a requested user is not found in the system.

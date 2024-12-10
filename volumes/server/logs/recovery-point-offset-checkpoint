@@ -30,7 +30,7 @@ comment.like.deleted 1 0
 subscription.deleted.DLT 0 0
 __consumer_offsets 41 0
 post.deleted 1 0
-__consumer_offsets 33 16
+__consumer_offsets 33 18
 __consumer_offsets 23 0
 __consumer_offsets 49 0
 comment.created 0 0
@@ -51,7 +51,7 @@ post.created 1 0
 __consumer_offsets 3 0
 __consumer_offsets 18 0
 media.deleted 2 0
-__consumer_offsets 37 13
+__consumer_offsets 37 15
 subscription.deleted.DLT 2 0
 comment.like.deleted 0 0
 __consumer_offsets 15 0
@@ -70,14 +70,14 @@ comment.deleted 1 0
 media.deleted 1 0
 __consumer_offsets 19 0
 subscription.created 0 2
-__consumer_offsets 11 50
+__consumer_offsets 11 52
 post.updated 1 0
 subscription.deleted.DLT 1 0
 __consumer_offsets 13 0
 __consumer_offsets 2 0
 comment.deleted 0 0
-__consumer_offsets 43 9
-__consumer_offsets 6 42
+__consumer_offsets 43 11
+__consumer_offsets 6 44
 __consumer_offsets 14 0
 post.like.deleted 0 0
 media.upload 0 0
@@ -85,7 +85,7 @@ comment.created 1 0
 comment.like.created 0 0
 user.deleted 1 0
 __consumer_offsets 20 0
-__consumer_offsets 0 9
+__consumer_offsets 0 11
 __consumer_offsets 44 0
 media.deleted 0 0
 subscription.created 2 0

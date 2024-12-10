@@ -1,8 +1,8 @@
 package org.thewhitemage13.interfaces;
 
 import org.thewhitemage13.UserEvent;
-import org.thewhitemage13.exception.CommentNotFoundException;
-import org.thewhitemage13.exception.MediaNotFoundException;
+import org.thewhitemage13.exceptions.CommentNotFoundException;
+import org.thewhitemage13.exceptions.MediaNotFoundException;
 
 /**
  * Interface defining a handler for user deletion events.

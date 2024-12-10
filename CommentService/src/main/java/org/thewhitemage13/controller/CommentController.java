@@ -8,7 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.thewhitemage13.dto.CommentCreateDto;
-import org.thewhitemage13.exception.CommentNotFoundException;
+import org.thewhitemage13.exceptions.CommentNotFoundException;
 import org.thewhitemage13.service.CommentServiceImpl;
 
 @Tag(name = "Comment Controller", description = "Operations related to managing comments")

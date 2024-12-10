@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.thewhitemage13.dto.CreateLikeComment;
 import org.thewhitemage13.dto.CreateLikePost;
-import org.thewhitemage13.exception.LikeNotFoundException;
+import org.thewhitemage13.exceptions.LikeNotFoundException;
 import org.thewhitemage13.service.LikeServiceImpl;
 
 @Tag(name = "Like Controller", description = "Operations related to likes management for posts and comments")

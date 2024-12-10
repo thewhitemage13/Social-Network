@@ -5,7 +5,7 @@ import org.springframework.kafka.annotation.KafkaHandler;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 import org.thewhitemage13.UserEvent;
-import org.thewhitemage13.exception.PostNotFoundException;
+import org.thewhitemage13.exceptions.PostNotFoundException;
 import org.thewhitemage13.service.PostServiceImpl;
 
 /**

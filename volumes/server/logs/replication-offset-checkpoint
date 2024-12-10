@@ -1,6 +1,6 @@
 0
 107
-__consumer_offsets 43 9
+__consumer_offsets 43 11
 __consumer_offsets 34 0
 comment.deleted 1 0
 post.like.deleted 2 0
@@ -27,7 +27,7 @@ __consumer_offsets 36 0
 __consumer_offsets 45 0
 __consumer_offsets 10 0
 post.updated 1 0
-__consumer_offsets 11 50
+__consumer_offsets 11 52
 post.like.created 1 0
 subscription.created.DLT 0 0
 __consumer_offsets 20 0
@@ -51,17 +51,17 @@ user.deleted 0 0
 comment.like.created 0 0
 __consumer_offsets 29 0
 comment.created 2 0
-__consumer_offsets 6 42
+__consumer_offsets 6 44
 __consumer_offsets 35 0
 user.updated 2 0
 __consumer_offsets 13 0
 media.upload 1 0
 __consumer_offsets 21 0
 __consumer_offsets 19 0
-__consumer_offsets 0 9
-__consumer_offsets 33 16
+__consumer_offsets 0 11
+__consumer_offsets 33 18
 user.created 2 0
-__consumer_offsets 37 13
+__consumer_offsets 37 15
 comment.created 0 0
 __consumer_offsets 8 9
 __consumer_offsets 24 0

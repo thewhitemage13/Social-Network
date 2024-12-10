@@ -5,8 +5,8 @@ import org.springframework.kafka.annotation.KafkaHandler;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 import org.thewhitemage13.UserEvent;
-import org.thewhitemage13.exception.CommentNotFoundException;
-import org.thewhitemage13.exception.MediaNotFoundException;
+import org.thewhitemage13.exceptions.CommentNotFoundException;
+import org.thewhitemage13.exceptions.MediaNotFoundException;
 import org.thewhitemage13.interfaces.UserDeletedEventHandlerInterface;
 import org.thewhitemage13.service.CommentServiceImpl;
 

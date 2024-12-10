@@ -11,8 +11,8 @@ import org.thewhitemage13.clients.UserClient;
 import org.thewhitemage13.dto.CreatePostDTO;
 import org.thewhitemage13.dto.UpdatePostDTO;
 import org.thewhitemage13.entity.Post;
-import org.thewhitemage13.exception.PostNotFoundException;
-import org.thewhitemage13.exception.UserNotFoundException;
+import org.thewhitemage13.exceptions.PostNotFoundException;
+import org.thewhitemage13.exceptions.UserNotFoundException;
 import org.thewhitemage13.processor.PostProcessor;
 import org.thewhitemage13.repository.PostRepository;
 

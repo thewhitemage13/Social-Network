@@ -7,9 +7,9 @@ import org.thewhitemage13.clients.PostClient;
 import org.thewhitemage13.clients.UserClient;
 import org.thewhitemage13.dto.CreateLikeComment;
 import org.thewhitemage13.dto.CreateLikePost;
-import org.thewhitemage13.exception.CommentNotFoundException;
-import org.thewhitemage13.exception.PostNotFoundException;
-import org.thewhitemage13.exception.UserNotFoundException;
+import org.thewhitemage13.exceptions.CommentNotFoundException;
+import org.thewhitemage13.exceptions.PostNotFoundException;
+import org.thewhitemage13.exceptions.UserNotFoundException;
 import org.thewhitemage13.interfaces.ValidationServiceInterface;
 
 /**

@@ -10,8 +10,8 @@ import org.springframework.http.ResponseEntity;
 import org.thewhitemage13.clients.PostClient;
 import org.thewhitemage13.clients.UserClient;
 import org.thewhitemage13.dto.CommentCreateDto;
-import org.thewhitemage13.exception.PostNotFoundException;
-import org.thewhitemage13.exception.UserNotFoundException;
+import org.thewhitemage13.exceptions.PostNotFoundException;
+import org.thewhitemage13.exceptions.UserNotFoundException;
 
 import static org.junit.jupiter.api.Assertions.*;
 

@@ -270,7 +270,7 @@ implements <a href="../interfaces/UserServiceInterface.html" title="interface in
 <dt>Returns:</dt>
 <dd>the username of the user</dd>
 <dt>Throws:</dt>
-<dd><code>org.thewhitemage13.exception.UserNotFoundException</code> - if no user is found with the given ID</dd>
+<dd><code>org.thewhitemage13.exceptions.UserNotFoundException</code> - if no user is found with the given ID</dd>
 </dl>
 </section>
 </li>
@@ -289,7 +289,7 @@ implements <a href="../interfaces/UserServiceInterface.html" title="interface in
 <dt>Returns:</dt>
 <dd>a <a href="../dto/GetUserDTO.html" title="class in org.thewhitemage13.dto"><code>GetUserDTO</code></a> containing the user's details</dd>
 <dt>Throws:</dt>
-<dd><code>org.thewhitemage13.exception.UserNotFoundException</code> - if no user is found with the given ID</dd>
+<dd><code>org.thewhitemage13.exceptions.UserNotFoundException</code> - if no user is found with the given ID</dd>
 </dl>
 </section>
 </li>
@@ -314,7 +314,7 @@ implements <a href="../interfaces/UserServiceInterface.html" title="interface in
 <div class="member-signature"><span class="annotations">@Cacheable(value="users",
            key="#username")
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../dto/GetUserDTO.html" title="class in org.thewhitemage13.dto">GetUserDTO</a></span>&nbsp;<span class="element-name">getInformationAboutUser</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;username)</span>
-                                   throws <span class="exceptions">org.thewhitemage13.exception.UserNotFoundException</span></div>
+                                   throws <span class="exceptions">org.thewhitemage13.exceptions.UserNotFoundException</span></div>
 <div class="block">Retrieves information about a user by their username using caching.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -324,7 +324,7 @@ implements <a href="../interfaces/UserServiceInterface.html" title="interface in
 <dt>Returns:</dt>
 <dd>a <a href="../dto/GetUserDTO.html" title="class in org.thewhitemage13.dto"><code>GetUserDTO</code></a> containing the user's details</dd>
 <dt>Throws:</dt>
-<dd><code>org.thewhitemage13.exception.UserNotFoundException</code> - if no user is found with the given username</dd>
+<dd><code>org.thewhitemage13.exceptions.UserNotFoundException</code> - if no user is found with the given username</dd>
 </dl>
 </section>
 </li>
@@ -334,7 +334,7 @@ implements <a href="../interfaces/UserServiceInterface.html" title="interface in
 <div class="member-signature"><span class="annotations">@CacheEvict(value={"users","usernames"},
             key="#userId")
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">deleteUser</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;userId)</span>
-                throws <span class="exceptions">org.thewhitemage13.exception.UserNotFoundException</span></div>
+                throws <span class="exceptions">org.thewhitemage13.exceptions.UserNotFoundException</span></div>
 <div class="block">Deletes a user by their ID and publishes a deletion event via Kafka.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -342,7 +342,7 @@ implements <a href="../interfaces/UserServiceInterface.html" title="interface in
 <dt>Parameters:</dt>
 <dd><code>userId</code> - the unique ID of the user to be deleted</dd>
 <dt>Throws:</dt>
-<dd><code>org.thewhitemage13.exception.UserNotFoundException</code> - if no user is found with the given ID</dd>
+<dd><code>org.thewhitemage13.exceptions.UserNotFoundException</code> - if no user is found with the given ID</dd>
 </dl>
 </section>
 </li>
@@ -374,7 +374,7 @@ implements <a href="../interfaces/UserServiceInterface.html" title="interface in
 <dt>Returns:</dt>
 <dd>an <a href="../dto/OpenUserDTO.html" title="class in org.thewhitemage13.dto"><code>OpenUserDTO</code></a> containing public user information</dd>
 <dt>Throws:</dt>
-<dd><code>org.thewhitemage13.exception.UserNotFoundException</code> - if no user is found with the given ID</dd>
+<dd><code>org.thewhitemage13.exceptions.UserNotFoundException</code> - if no user is found with the given ID</dd>
 </dl>
 </section>
 </li>
@@ -398,7 +398,7 @@ com.google.i18n.phonenumbers.NumberParseException</span></div>
 <dd><code>userId</code> - the unique ID of the user to be updated</dd>
 <dd><code>createUserDTO</code> - the DTO containing the updated user data</dd>
 <dt>Throws:</dt>
-<dd><code>org.thewhitemage13.exception.UserNotFoundException</code> - if no user is found with the given ID</dd>
+<dd><code>org.thewhitemage13.exceptions.UserNotFoundException</code> - if no user is found with the given ID</dd>
 <dd><code><a href="../exception/UsernameIsBusyException.html" title="class in org.thewhitemage13.exception">UsernameIsBusyException</a></code> - if the new username is already in use</dd>
 <dd><code><a href="../exception/EmailAlreadyTakenException.html" title="class in org.thewhitemage13.exception">EmailAlreadyTakenException</a></code> - if the new email is already taken</dd>
 <dd><code><a href="../exception/EmailBusyException.html" title="class in org.thewhitemage13.exception">EmailBusyException</a></code> - if the email is invalid</dd>

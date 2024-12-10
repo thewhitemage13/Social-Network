@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.thewhitemage13.clients.UserClient;
-import org.thewhitemage13.exception.UserNotFoundException;
+import org.thewhitemage13.exceptions.UserNotFoundException;
 import org.thewhitemage13.interfaces.ValidationServiceInterface;
 import org.thewhitemage13.repository.SubscriptionRepository;
 
@@ -24,7 +24,7 @@ import org.thewhitemage13.repository.SubscriptionRepository;
  *
  * @see org.thewhitemage13.clients.UserClient
  * @see org.thewhitemage13.repository.SubscriptionRepository
- * @see org.thewhitemage13.exception.UserNotFoundException
+ * @see UserNotFoundException
  * @see org.thewhitemage13.interfaces.ValidationServiceInterface
  *
  * @author Mukhammed Lolo

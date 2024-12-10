@@ -9,7 +9,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.thewhitemage13.dto.CommentCreateDto;
 import org.thewhitemage13.entity.Comment;
-import org.thewhitemage13.exception.CommentNotFoundException;
+import org.thewhitemage13.exceptions.CommentNotFoundException;
 import org.thewhitemage13.repository.CommentRepository;
 
 import java.util.List;

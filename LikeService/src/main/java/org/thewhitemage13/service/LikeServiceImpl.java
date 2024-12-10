@@ -9,7 +9,7 @@ import org.thewhitemage13.LikeEvent;
 import org.thewhitemage13.dto.CreateLikeComment;
 import org.thewhitemage13.dto.CreateLikePost;
 import org.thewhitemage13.entity.Like;
-import org.thewhitemage13.exception.LikeNotFoundException;
+import org.thewhitemage13.exceptions.LikeNotFoundException;
 import org.thewhitemage13.interfaces.LikeServiceInterface;
 import org.thewhitemage13.repository.LikeRepository;
 

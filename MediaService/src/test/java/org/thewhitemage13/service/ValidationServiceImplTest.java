@@ -8,7 +8,7 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.ResponseEntity;
 import org.thewhitemage13.clients.UserClient;
-import org.thewhitemage13.exception.UserNotFoundException;
+import org.thewhitemage13.exceptions.UserNotFoundException;
 
 import static org.junit.jupiter.api.Assertions.*;
 

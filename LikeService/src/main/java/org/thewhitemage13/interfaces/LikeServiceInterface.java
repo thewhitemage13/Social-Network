@@ -2,7 +2,7 @@ package org.thewhitemage13.interfaces;
 
 import org.thewhitemage13.dto.CreateLikeComment;
 import org.thewhitemage13.dto.CreateLikePost;
-import org.thewhitemage13.exception.LikeNotFoundException;
+import org.thewhitemage13.exceptions.LikeNotFoundException;
 
 /**
  * Interface that defines the contract for the like service operations.

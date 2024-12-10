@@ -19,7 +19,7 @@ import org.springframework.kafka.support.serializer.ErrorHandlingDeserializer;
 import org.springframework.kafka.support.serializer.JsonDeserializer;
 import org.springframework.kafka.support.serializer.JsonSerializer;
 import org.springframework.util.backoff.FixedBackOff;
-import org.thewhitemage13.exception.RetryableException;
+import org.thewhitemage13.exceptions.RetryableException;
 
 import java.awt.geom.NoninvertibleTransformException;
 import java.util.HashMap;

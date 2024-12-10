@@ -9,7 +9,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.thewhitemage13.dto.GetUserDTO;
 import org.thewhitemage13.dto.CreateUserDTO;
 import org.thewhitemage13.entity.User;
-import org.thewhitemage13.exception.UserNotFoundException;
+import org.thewhitemage13.exceptions.UserNotFoundException;
 import org.thewhitemage13.processor.UserProcessorImpl;
 import org.thewhitemage13.repository.UserRepository;
 

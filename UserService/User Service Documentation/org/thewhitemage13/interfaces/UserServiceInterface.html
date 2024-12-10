@@ -329,7 +329,7 @@ com.google.i18n.phonenumbers.NumberParseException</span></div>
 <dd><code>createUserDTO</code> - the new user profile data</dd>
 <dt>Throws:</dt>
 <dd><code><a href="../exception/UsernameIsBusyException.html" title="class in org.thewhitemage13.exception">UsernameIsBusyException</a></code> - if the username is already taken by another user</dd>
-<dd><code>org.thewhitemage13.exception.UserNotFoundException</code> - if the user with the given ID is not found</dd>
+<dd><code>org.thewhitemage13.exceptions.UserNotFoundException</code> - if the user with the given ID is not found</dd>
 <dd><code><a href="../exception/EmailAlreadyTakenException.html" title="class in org.thewhitemage13.exception">EmailAlreadyTakenException</a></code> - if the email is already taken by another user</dd>
 <dd><code><a href="../exception/EmailBusyException.html" title="class in org.thewhitemage13.exception">EmailBusyException</a></code> - if the email is currently in use</dd>
 <dd><code>com.google.i18n.phonenumbers.NumberParseException</code> - if the phone number is invalid or cannot be parsed</dd>
@@ -340,7 +340,7 @@ com.google.i18n.phonenumbers.NumberParseException</span></div>
 <section class="detail" id="getInformationAboutUser(java.lang.String)">
 <h3>getInformationAboutUser</h3>
 <div class="member-signature"><span class="return-type"><a href="../dto/GetUserDTO.html" title="class in org.thewhitemage13.dto">GetUserDTO</a></span>&nbsp;<span class="element-name">getInformationAboutUser</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;username)</span>
-                            throws <span class="exceptions">org.thewhitemage13.exception.UserNotFoundException</span></div>
+                            throws <span class="exceptions">org.thewhitemage13.exceptions.UserNotFoundException</span></div>
 <div class="block">Retrieves user information based on their username.
  <p>
  This method fetches a userâ€™s information (such as their email, profile, etc.) by their username.
@@ -351,7 +351,7 @@ com.google.i18n.phonenumbers.NumberParseException</span></div>
 <dt>Returns:</dt>
 <dd>a GetUserDTO containing the user's information</dd>
 <dt>Throws:</dt>
-<dd><code>org.thewhitemage13.exception.UserNotFoundException</code> - if the user is not found with the given username</dd>
+<dd><code>org.thewhitemage13.exceptions.UserNotFoundException</code> - if the user is not found with the given username</dd>
 </dl>
 </section>
 </li>
@@ -359,7 +359,7 @@ com.google.i18n.phonenumbers.NumberParseException</span></div>
 <section class="detail" id="deleteUser(java.lang.Long)">
 <h3>deleteUser</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">deleteUser</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;userId)</span>
-         throws <span class="exceptions">org.thewhitemage13.exception.UserNotFoundException</span></div>
+         throws <span class="exceptions">org.thewhitemage13.exceptions.UserNotFoundException</span></div>
 <div class="block">Deletes a user based on their ID.
  <p>
  This method deletes the user account corresponding to the provided ID, including all associated data.
@@ -368,7 +368,7 @@ com.google.i18n.phonenumbers.NumberParseException</span></div>
 <dt>Parameters:</dt>
 <dd><code>userId</code> - the ID of the user to be deleted</dd>
 <dt>Throws:</dt>
-<dd><code>org.thewhitemage13.exception.UserNotFoundException</code> - if the user with the given ID is not found</dd>
+<dd><code>org.thewhitemage13.exceptions.UserNotFoundException</code> - if the user with the given ID is not found</dd>
 </dl>
 </section>
 </li>

@@ -2,7 +2,7 @@ package org.thewhitemage13.interfaces;
 
 import org.springframework.web.multipart.MultipartFile;
 import org.thewhitemage13.entity.Media;
-import org.thewhitemage13.exception.MediaNotFoundException;
+import org.thewhitemage13.exceptions.MediaNotFoundException;
 
 import java.io.IOException;
 

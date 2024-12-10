@@ -5,7 +5,7 @@ import org.springframework.kafka.annotation.KafkaHandler;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 import org.thewhitemage13.PostEvent;
-import org.thewhitemage13.exception.CommentNotFoundException;
+import org.thewhitemage13.exceptions.CommentNotFoundException;
 import org.thewhitemage13.service.CommentServiceImpl;
 
 /**

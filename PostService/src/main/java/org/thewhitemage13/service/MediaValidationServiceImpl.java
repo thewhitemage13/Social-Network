@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.thewhitemage13.clients.MediaClient;
 import org.thewhitemage13.dto.CreatePostDTO;
-import org.thewhitemage13.exception.MediaNotFoundException;
+import org.thewhitemage13.exceptions.MediaNotFoundException;
 import org.thewhitemage13.interfaces.MediaValidationServiceInterface;
 
 /**

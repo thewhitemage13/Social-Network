@@ -2,7 +2,7 @@ package org.thewhitemage13.interfaces;
 
 import org.thewhitemage13.dto.CommentCreateDto;
 import org.thewhitemage13.entity.Comment;
-import org.thewhitemage13.exception.CommentNotFoundException;
+import org.thewhitemage13.exceptions.CommentNotFoundException;
 
 import java.util.List;
 

@@ -8,7 +8,7 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.HttpStatus;
 import org.thewhitemage13.dto.CommentCreateDto;
-import org.thewhitemage13.exception.CommentNotFoundException;
+import org.thewhitemage13.exceptions.CommentNotFoundException;
 import org.thewhitemage13.service.CommentServiceImpl;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -5,7 +5,7 @@ import org.springframework.kafka.annotation.KafkaHandler;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 import org.thewhitemage13.PostEvent;
-import org.thewhitemage13.exception.LikeNotFoundException;
+import org.thewhitemage13.exceptions.LikeNotFoundException;
 import org.thewhitemage13.service.LikeServiceImpl;
 
 /**

@@ -1,4 +1,4 @@
-package org.thewhitemage13.exception;
+package org.thewhitemage13.exceptions;
 
 /**
  * Exception indicating a retryable error condition.

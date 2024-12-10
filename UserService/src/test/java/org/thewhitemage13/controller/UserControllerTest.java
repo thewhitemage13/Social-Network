@@ -13,7 +13,7 @@ import org.thewhitemage13.dto.GetUserDTO;
 import org.thewhitemage13.dto.OpenUserDTO;
 import org.thewhitemage13.dto.UserSubscriptionDTO;
 import org.thewhitemage13.exception.EmailAlreadyTakenException;
-import org.thewhitemage13.exception.UserNotFoundException;
+import org.thewhitemage13.exceptions.UserNotFoundException;
 import org.thewhitemage13.exception.UsernameIsBusyException;
 import org.thewhitemage13.service.UserServiceImpl;
 
