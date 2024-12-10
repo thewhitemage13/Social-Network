@@ -1,0 +1,71 @@
+package org.thewhitemage13.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.time.LocalDate;
+
+/**
+ * Represents statistical data related to posts in the system.
+ * <p>
+ * This entity tracks the number of posts created and deleted for a specific date.
+ * It is primarily used for analytical and reporting purposes.
+ * </p>
+ *
+ * <h2>Key Features:</h2>
+ * <ul>
+ *     <li>Unique identifier for the post statistic entry.</li>
+ *     <li>Counts for posts created and deleted.</li>
+ *     <li>Date for which the statistics are recorded.</li>
+ * </ul>
+ *
+ * @author Mukhammed Lolo
+ * @version 1.0.0
+ */
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+public class PostStatistic {
+
+    /**
+     * Unique identifier for the post statistic entry.
+     * <p>
+     * This ID is the primary key and is auto-generated using the IDENTITY strategy.
+     * </p>
+     */
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long postStatisticId;
+
+    /**
+     * The number of posts created on the specified date.
+     * <p>
+     * This field captures the total count of posts added to the system.
+     * </p>
+     */
+    private Long postsCreated;
+
+    /**
+     * The number of posts deleted on the specified date.
+     * <p>
+     * This field captures the total count of posts removed from the system.
+     * </p>
+     */
+    private Long postsDeleted;
+
+    /**
+     * The date for which the post statistics are recorded.
+     * <p>
+     * Represents the day associated with the post operations.
+     * </p>
+     */
+    private LocalDate statisticDate;
+}
