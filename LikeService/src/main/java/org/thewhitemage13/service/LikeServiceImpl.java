@@ -156,10 +156,12 @@ public class LikeServiceImpl implements LikeServiceInterface {
                         like.getCommentId(),
                         like.getCreatedAt()
                 );
-        kafkaTemplate.executeInTransaction(operations -> {
-            operations.send("post.like.created",likeEvent.getLikeId(), likeEvent);
-            return null;
-        });
+//        kafkaTemplate.executeInTransaction(operations -> {
+//            operations.send("post.like.created",likeEvent.getLikeId(), likeEvent);
+//            return null;
+//        });
+
+        kafkaTemplate.send("post.like.created",likeEvent.getLikeId(), likeEvent);
     }
 
     /**
@@ -192,10 +194,12 @@ public class LikeServiceImpl implements LikeServiceInterface {
                         like.getCommentId(),
                         like.getCreatedAt()
                 );
-        kafkaTemplate.executeInTransaction(operations -> {
-            operations.send("comment.like.created",likeEvent.getLikeId(), likeEvent);
-            return null;
-        });
+//        kafkaTemplate.executeInTransaction(operations -> {
+//            operations.send("comment.like.created",likeEvent.getLikeId(), likeEvent);
+//            return null;
+//        });
+
+        kafkaTemplate.send("comment.like.created",likeEvent.getLikeId(), likeEvent);
 
     }
 
@@ -226,16 +230,20 @@ public class LikeServiceImpl implements LikeServiceInterface {
 
         if (deleteLike.getPostId() == null)
         {
-            kafkaTemplate.executeInTransaction(operations -> {
-                operations.send("comment.like.deleted", deleteLike.getCommentId(), likeEvent);
-                return null;
-            });
+//            kafkaTemplate.executeInTransaction(operations -> {
+//                operations.send("comment.like.deleted", deleteLike.getCommentId(), likeEvent);
+//                return null;
+//            });
+
+            kafkaTemplate.send("comment.like.deleted", deleteLike.getCommentId(), likeEvent);
         }
         else {
-            kafkaTemplate.executeInTransaction(operations -> {
-                operations.send("post.like.deleted", deleteLike.getCommentId(), likeEvent);
-                return null;
-            });
+//            kafkaTemplate.executeInTransaction(operations -> {
+//                operations.send("post.like.deleted", deleteLike.getCommentId(), likeEvent);
+//                return null;
+//            });
+
+            kafkaTemplate.send("post.like.deleted", deleteLike.getCommentId(), likeEvent);
         }
     }
 

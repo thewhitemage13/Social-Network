@@ -163,11 +163,13 @@ public class UserServiceImpl implements UserServiceInterface {
         UserEvent userEvent = userProcessorImpl.getUserEvent(user);
 
         userRepository.delete(user);
-
-        kafkaTemplate.executeInTransaction(operations -> {
-            operations.send("user.deleted", user.getUserId(), userEvent);
-            return null;
-        });
+//
+//        kafkaTemplate.executeInTransaction(operations -> {
+//            operations.send("user.deleted", user.getUserId(), userEvent);
+//            return null;
+//        });
+//
+        kafkaTemplate.send("user.deleted", user.getUserId(), userEvent);
     }
 
     /**
@@ -250,10 +252,12 @@ public class UserServiceImpl implements UserServiceInterface {
 
         UserEvent userEvent = userProcessorImpl.getUserEvent(user);
 
-        kafkaTemplate.executeInTransaction(operations -> {
-            operations.send("user.updated", user.getUserId(), userEvent);
-            return null;
-        });
+//        kafkaTemplate.executeInTransaction(operations -> {
+//            operations.send("user.updated", user.getUserId(), userEvent);
+//            return null;
+//        });
+
+        kafkaTemplate.send("user.updated", user.getUserId(), userEvent);
     }
 
     /**
@@ -282,9 +286,11 @@ public class UserServiceImpl implements UserServiceInterface {
 
         UserEvent event = userProcessorImpl.getUserEvent(registerUser);
 
-        kafkaTemplate.executeInTransaction(operations -> {
-            operations.send("user.updated", registerUser.getUserId(), event);
-            return null;
-        });
+//        kafkaTemplate.executeInTransaction(operations -> {
+//            operations.send("user.updated", registerUser.getUserId(), event);
+//            return null;
+//        });
+//
+        kafkaTemplate.send("user.updated", registerUser.getUserId(), event);
     }
 }

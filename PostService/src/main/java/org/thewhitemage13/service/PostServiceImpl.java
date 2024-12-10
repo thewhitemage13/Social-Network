@@ -256,10 +256,12 @@ public class PostServiceImpl implements PostServiceInterface {
                 );
         postRepository.save(post);
         PostEvent postEvent = postProcessor.getPostEvent(post);
-        kafkaTemplate.executeInTransaction(operations -> {
-            operations.send("post.created", post.getPostId(), postEvent);
-            return null;
-        });
+//        kafkaTemplate.executeInTransaction(operations -> {
+//            operations.send("post.created", post.getPostId(), postEvent);
+//            return null;
+//        });
+
+        kafkaTemplate.send("post.created", post.getPostId(), postEvent);
     }
 
     /**
@@ -283,10 +285,12 @@ public class PostServiceImpl implements PostServiceInterface {
         update.setUpdatedAt(LocalDateTime.now());
         postRepository.save(update);
         PostEvent postEvent = postProcessor.getPostEvent(update);
-        kafkaTemplate.executeInTransaction(operations -> {
-            operations.send("post.updated", update.getPostId(), postEvent);
-            return null;
-        });
+//        kafkaTemplate.executeInTransaction(operations -> {
+//            operations.send("post.updated", update.getPostId(), postEvent);
+//            return null;
+//        });
+
+        kafkaTemplate.send("post.updated", update.getPostId(), postEvent);
     }
 
     /**
@@ -306,10 +310,12 @@ public class PostServiceImpl implements PostServiceInterface {
                 .orElseThrow(()-> new PostNotFoundException("Post with id = %s not found".formatted(postId)));
         postRepository.delete(deletePost);
         PostEvent postEvent = postProcessor.getPostEvent(deletePost);
-        kafkaTemplate.executeInTransaction(operations -> {
-            operations.send("post.deleted", deletePost.getPostId(), postEvent);
-            return null;
-        });
+//        kafkaTemplate.executeInTransaction(operations -> {
+//            operations.send("post.deleted", deletePost.getPostId(), postEvent);
+//            return null;
+//        });
+
+        kafkaTemplate.send("post.deleted", deletePost.getPostId(), postEvent);
     }
 
     /**

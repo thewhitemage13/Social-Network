@@ -138,10 +138,12 @@ public class MediaServiceImpl implements MediaServiceInterface {
                         media.getUploadDate()
                 );
 
-        kafkaTemplate.executeInTransaction(operations -> {
-            operations.send("media.upload", media.getMediaId(), mediaEvent);
-            return null;
-        });
+//        kafkaTemplate.executeInTransaction(operations -> {
+//            operations.send("media.upload", media.getMediaId(), mediaEvent);
+//            return null;
+//        });
+
+        kafkaTemplate.send("media.upload", media.getMediaId(), mediaEvent);
         return url;
     }
 
@@ -192,10 +194,12 @@ public class MediaServiceImpl implements MediaServiceInterface {
                         media.getFileType(),
                         media.getUploadDate()
                 );
-        kafkaTemplate.executeInTransaction(operations -> {
-            operations.send("media.deleted", media.getMediaId(), mediaEvent);
-            return null;
-        });
+//        kafkaTemplate.executeInTransaction(operations -> {
+//            operations.send("media.deleted", media.getMediaId(), mediaEvent);
+//            return null;
+//        });
+
+        kafkaTemplate.send("media.deleted", media.getMediaId(), mediaEvent);
     }
 
     /**

@@ -187,10 +187,12 @@ public class CommentServiceImpl implements CommentServiceInterface {
                         comment.getCreatedAt(),
                         comment.getUpdatedAt()
                 );
-        kafkaTemplate.executeInTransaction(operations -> {
-            operations.send("comment.created", comment.getCommentId(), commentEvent);
-            return null;
-        });
+//        kafkaTemplate.executeInTransaction(operations -> {
+//            operations.send("comment.created", comment.getCommentId(), commentEvent);
+//            return null;
+//        });
+
+        kafkaTemplate.send("comment.created", comment.getCommentId(), commentEvent);
     }
 
     /**
@@ -227,10 +229,12 @@ public class CommentServiceImpl implements CommentServiceInterface {
                         update.getCreatedAt(),
                         update.getUpdatedAt()
                 );
-        kafkaTemplate.executeInTransaction(operations -> {
-            operations.send("comment.updated", update.getCommentId(), commentEvent);
-            return null;
-        });
+//        kafkaTemplate.executeInTransaction(operations -> {
+//            operations.send("comment.updated", update.getCommentId(), commentEvent);
+//            return null;
+//        });
+
+        kafkaTemplate.send("comment.updated", update.getCommentId(), commentEvent);
     }
 
     /**
@@ -261,11 +265,12 @@ public class CommentServiceImpl implements CommentServiceInterface {
                         deleteComment.getCreatedAt(),
                         deleteComment.getUpdatedAt()
                 );
-        kafkaTemplate.executeInTransaction(operations -> {
-            operations.send("comment.deleted", deleteComment.getCommentId(), commentEvent);
-            return null;
-        });
+//        kafkaTemplate.executeInTransaction(operations -> {
+//            operations.send("comment.deleted", deleteComment.getCommentId(), commentEvent);
+//            return null;
+//        });
 
+        kafkaTemplate.send("comment.deleted", deleteComment.getCommentId(), commentEvent);
     }
 
     /**

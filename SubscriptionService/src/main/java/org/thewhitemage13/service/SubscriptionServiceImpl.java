@@ -211,10 +211,12 @@ public class SubscriptionServiceImpl implements SubscriptionInterface {
         subscriptionRepository.save(subscription);
         SubscriptionEvent subscriptionEvent = subscriptionProcessorImpl.getSubscriptionEvent(subscription);
 
-        kafkaTemplate.executeInTransaction(operations -> {
-            operations.send("subscription.created", subscription.getSubscriptionId(), subscriptionEvent);
-            return null;
-        });
+//        kafkaTemplate.executeInTransaction(operations -> {
+//            operations.send("subscription.created", subscription.getSubscriptionId(), subscriptionEvent);
+//            return null;
+//        });
+
+        kafkaTemplate.send("subscription.created", subscription.getSubscriptionId(), subscriptionEvent);
     }
 
     /**
@@ -233,10 +235,12 @@ public class SubscriptionServiceImpl implements SubscriptionInterface {
         subscriptionRepository.delete(delete);
         SubscriptionEvent subscriptionEvent = subscriptionProcessorImpl.getSubscriptionEvent(delete);
 
-        kafkaTemplate.executeInTransaction(operations -> {
-            operations.send("subscription.deleted", delete.getSubscriptionId(), subscriptionEvent);
-            return null;
-        });
+//        kafkaTemplate.executeInTransaction(operations -> {
+//            operations.send("subscription.deleted", delete.getSubscriptionId(), subscriptionEvent);
+//            return null;
+//        });
+
+        kafkaTemplate.send("subscription.deleted", delete.getSubscriptionId(), subscriptionEvent);
     }
 
     /**

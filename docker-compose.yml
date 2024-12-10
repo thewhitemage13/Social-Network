@@ -1,0 +1,159 @@
+services:
+
+  kafka-1:
+    image: bitnami/kafka:latest
+    container_name: kafka-1
+    ports:
+      - "9093:9093"
+      - "9094:9094"
+    environment:
+      - KAFKA_CFG_NODE_ID=2
+      - KAFKA_KRAFT_CLUSTER_ID=31MpYrAGTA6zUI8uk7SzIg
+      - KAFKA_CFG_PROCESS_ROLES=controller,broker
+      - KAFKA_CFG_CONTROLLER_QUORUM_VOTERS=2@kafka-1:9094
+      - KAFKA_CFG_LISTENERS=PLAINTEXT://:9093,CONTROLLER://:9094
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9093
+      - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      - KAFKA_CFG_CONTROLLER_LISTENER_NAMES=CONTROLLER
+      - KAFKA_CFG_INTER_BROKER_LISTENER_NAME=PLAINTEXT
+      - KAFKA_CFG_NUM_PARTITIONS=1
+      - KAFKA_CFG_OFFSETS_TOPIC_REPLICATION_FACTOR=1
+      - KAFKA_CFG_LOG_DIRS=/bitnami/kafka/logs
+    volumes:
+      - ./volumes/server:/bitnami/kafka
+    restart: always
+
+  redis:
+    image: redis:6.0.7
+    container_name: redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_volume_data:/data
+
+  redis_insight:
+    image: redislabs/redisinsight:1.14.0
+    container_name: redis_insight
+    restart: always
+    ports:
+      - "8001:8001"
+    volumes:
+      - redis_insight_volume_data:/db
+
+
+  user_service_data:
+    image: postgres
+    container_name: user_service_data
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=user_service_data
+    volumes:
+      - user_service_data:/var/lib/postgresql/data
+    ports:
+      - "5438:5432"
+
+  subscription_service_data:
+    image: postgres
+    container_name: subscription_service_data
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=subscription_service_data
+    volumes:
+      - subscription_service_data:/var/lib/postgresql/data
+    ports:
+      - "5439:5432"
+
+  statistic_service_data:
+    image: postgres
+    container_name: statistic_service_data
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=statistic_service_data
+    volumes:
+      - statistic_service_data:/var/lib/postgresql/data
+    ports:
+      - "5440:5432"
+
+  post_service_data:
+    image: postgres
+    container_name: post_service_data
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=post_service_data
+    volumes:
+      - post_service_data:/var/lib/postgresql/data
+    ports:
+      - "5441:5432"
+
+  notification_service_data:
+    image: postgres
+    container_name: notification_service_data
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=notification_service_data
+    volumes:
+      - notification_service_data:/var/lib/postgresql/data
+    ports:
+      - "5442:5432"
+
+  media_service_data:
+    image: postgres
+    container_name: media_service_data
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=media_service_data
+    volumes:
+      - media_service_data:/var/lib/postgresql/data
+    ports:
+      - "5443:5432"
+
+  like_service_data:
+    image: postgres
+    container_name: like_service_data
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=like_service_data
+    volumes:
+      - like_service_data:/var/lib/postgresql/data
+    ports:
+      - "5444:5432"
+
+  comment_service_data:
+    image: postgres
+    container_name: comment_service_data
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=comment_service_data
+    volumes:
+      - comment_service_data:/var/lib/postgresql/data
+    ports:
+      - "5445:5432"
+
+volumes:
+  redis_volume_data:
+  redis_insight_volume_data:
+  user_service_data:
+  subscription_service_data:
+  statistic_service_data:
+  post_service_data:
+  notification_service_data:
+  media_service_data:
+  like_service_data:
+  comment_service_data:
