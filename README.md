@@ -1,8 +1,11 @@
-# Social Network
+# Social Network 🤳
 
-**Description:** Developed a social network using a microservice architecture that provides flexibility, scalability and high system performance. The project includes multiple microservices, each responsible for a specific functionality of the platform, ensuring reliable and efficient interaction between components.
+**Overview:** 
 
-## Functionality
+Developed a social network using a microservice architecture that provides flexibility, scalability and high system performance. The project includes multiple microservices, each responsible for a specific functionality of the platform, ensuring reliable and efficient interaction between components.
+
+## Features ⚡
+
 **[UserService](https://github.com/thewhitemage13/SocialNetwork/blob/main/UserService/src/main/java/org/thewhitemage13/service/UserService.java)**: 
    - User creation
    - User deletions
@@ -54,7 +57,7 @@
    - View statistics by date
    - View all statistics
 
-## Architecture
+## Architecture 🏡
 
 The project is implemented based on a microservice architecture using the following components:
 
@@ -69,13 +72,13 @@ The project is implemented based on a microservice architecture using the follow
 - **[NotificationService](https://github.com/thewhitemage13/SocialNetwork/tree/main/NotificationService)**: To manage notifications.
 - **[StatisticService](https://github.com/thewhitemage13/SocialNetwork/tree/main/StatisticService)**: Statistical Management.
 
-## Rules of Use
+## Rules of Use 📃
 
 - Email and phone number must be unique.
 - The user id we specify in the order must exist.
 - Product id we specify in the order must exist.
 
-## Technologies
+## Technologies ⚙️
 
 The following technologies and libraries are used in the project:
 
@@ -86,6 +89,7 @@ The following technologies and libraries are used in the project:
   - Spring Cloud
   - Spring Web
 - **Amazon S3** - cloud storage for media files.
+- **Docker**: Application containerization.
 - **PostgreSQL** - relational database.
 - **Kafka** - message broker for microservices interoperability.
 - **Maven** - a tool for dependency management and project building.
@@ -95,7 +99,7 @@ The following technologies and libraries are used in the project:
 - **Design Patterns** - design patterns for creating clean and maintainable code.
 - **S.O.L.I.D.** - Principles for architecture flexibility and scalability.
 
-## Achievements
+## Achievements 🔥
 
 - **Microservice Architecture**: Designed and implemented a flexible, scalable microservice architecture.
 - **Amazon S3 Integration**: Implemented secure and efficient media storage.
@@ -106,7 +110,7 @@ The following technologies and libraries are used in the project:
 - **Logging**: Implemented logging using Spring AOP.
 - **Documentation**: Documented code using Swagger and Javadoc.
 
-## Installation and Startup
+## Installation and Startup 🛠
 
 1. Install **JDK** (Java Development Kit).
 2. Install **Maven**.
@@ -114,3 +118,6 @@ The following technologies and libraries are used in the project:
 4. Install **Kafka**.
 5. Create an **Amazon S3** account and configure access.
 6. Clone the repository and follow the individual microservice setup guides provided in their respective folders.
+
+---
+Made with ❤️ by [Mukhammed Lolo](https://github.com/thewhitemage13).
