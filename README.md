@@ -96,27 +96,21 @@ The following technologies and libraries are used in the project:
 - **S.O.L.I.D.** - Principles for architecture flexibility and scalability.
 
 ## Achievements
-- Microservice Architecture: Designed and implemented a microservice architecture to provide flexibility and ease of scaling the application.
-- Integration with Amazon S3: Implemented integration with Amazon S3 for media storage, enabling secure and efficient media management.
-- Data validation: Utilized Passay, libphonenumber, and Commons-Validator libraries to ensure the security and accuracy of user data.
-- Secure Communication: Seamless communication between microservices was set up using Kafka and Spring Cloud, which ensured high reliability and performance of the system.
-- Design Principles: Applied S.O.L.I.D. principles and design patterns, which improved the quality of the architecture and facilitated code maintenance.
 
-### Installation and Startup
+- **Microservice Architecture**: Designed and implemented a flexible, scalable microservice architecture.
+- **Amazon S3 Integration**: Implemented secure and efficient media storage.
+- **Data Validation**: Utilized Passay, libphonenumber, and Commons-Validator for secure, accurate user data.
+- **Kafka Communication**: Ensured reliable and high-performance communication between microservices using Kafka and Spring Cloud.
+- **Design Principles**: Applied S.O.L.I.D. principles and design patterns for maintainable and extensible code.
+- **Caching**: Improved performance with Redis.
+- **Logging**: Implemented logging using Spring AOP.
+- **Documentation**: Documented code using Swagger and Javadoc.
 
-- Installed JDK (Java Development Kit).
-- Maven installed.
-- Installed PostgreSQL.
-- Kafka installed.
-- Amazon Web Services (AWS) account with access to S3.                          Social Network (github.com)
-• Role: Development, Architecture Design.
-• Description: Developed a social network using a microservice architecture that provides flexibility, scalability and high system performance. The project includes multiple microservices, each responsible for a specific functionality of the platform, ensuring reliable and efficient interaction between components.
-• Technologies: Java, Git, Spring(Boot, Data, Cloud, Web, AOP), Amazon s3, PostgreSQL, Redis, Maven, Kafka, Design Patterns, S.O.L.I.D., Passay, libphonenumber, Commons-Validator.                                                                                                                            
-• Achievements:
-- Designed and implemented a microservice architecture to provide flexibility and ease of scaling the application.
-- Integrated Amazon S3 for media file storage, enabling secure and efficient media file management.
-- Configured seamless communication between microservices using Kafka and Spring Cloud, ensuring system reliability and high performance.
-- Applied the principles of  S.O.L.I.D. and Design Patterns to create maintainable and extensible code, improving the quality of the architecture.
-- Documented code using Swagger and Javadoc.
-- Improved performance with cache
-- Used Spring AOP for logging
+## Installation and Startup
+
+1. Install **JDK** (Java Development Kit).
+2. Install **Maven**.
+3. Install **PostgreSQL**.
+4. Install **Kafka**.
+5. Create an **Amazon S3** account and configure access.
+6. Clone the repository and follow the individual microservice setup guides provided in their respective folders.
